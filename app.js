@@ -8,6 +8,8 @@ import contactsRouter from './routes/contacts.js';
 import newsRouter from './routes/news.js';
 import commentRouter from './routes/comment.js';
 import coursesRouter from './routes/course.js';
+import registrationsRouter from './routes/registrations.js';
+
 
 const app = express();
 dotenv.config();
@@ -19,6 +21,7 @@ app.use('/contacts', contactsRouter);
 app.use('/news', newsRouter);
 app.use('/comment', commentRouter);
 app.use('/course', coursesRouter);
+app.use('/registration', registrationsRouter);
 app.get('/', (req, res) => {
   res.send('Hello Mr Ally');
 });
