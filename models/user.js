@@ -4,16 +4,7 @@ const userSchema = mongoose.Schema({
   email: { type: String, required: true },
   password: { type: String, required: true },
   id: { type: String },
-  firstName: {type: String, required: true},
-  lastName: {type: String, required: true},
-  correctEmail: {type: String, required: true},
-  city: {type: String, required: true},
-  delegate: {type: String, required: true},
-  country: {type: String, required: true},
-  amount: {type: String, required: true},
-  paymentMethode: {type: String, required: true},
-  paymentStatus: {type: String, required: true},
-  whatsApp: { type: String, required: true}
+   
 });
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
