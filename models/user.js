@@ -1,7 +1,6 @@
-import mongoose from "mongoose";
-
+import mongoose from 'mongoose';
 const userSchema = mongoose.Schema({
-  name: { type: String, required:  true },
+  name: { type: String, required: true },
   email: { type: String, required: true },
   password: { type: String, required: true },
   id: { type: String },
@@ -11,10 +10,12 @@ const userSchema = mongoose.Schema({
   city: {type: String, required: true},
   delegate: {type: String, required: true},
   country: {type: String, required: true},
-  amount: {type: Number, required: true},
+  amount: {type: String, required: true},
   paymentMethode: {type: String, required: true},
   paymentStatus: {type: String, required: true},
-  whatsApp: {type: String, required: true},
+  whatsApp: { type: String, required: true}
 });
 
-export default mongoose.model("User", userSchema);
+const User = mongoose.models.User || mongoose.model('User', userSchema);
+
+export default User;
