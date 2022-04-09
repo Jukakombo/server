@@ -1,16 +1,17 @@
 import mongoose from "mongoose";
 const registrationSchema = mongoose.Schema(
   {
-    firstName: String,
-    lastName: String,
-    correctEmail: String,
-    city: String,
-    delegate: String,
-    country: String,
-    amount: String,
-    paymentMethode: String,
-    paymentStatus: String,
-    whatsApp: String,
+    user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
+    firstName: {type:String, required: true},
+    lastName: {type:String, required: true},
+    correctEmail: {type:String, required: true},
+    city: {type:String, required: true},
+    delegate: {type:String, required: true},
+    country: {type:String, required: true},
+    amount: Number,
+    paymentMethode: {type:String, required: true},
+    paymentStatus: {type:Boolean, required: true, default:false},
+    whatsApp: {type:String, required: true},
   },
   { timestamps: true }
 );
