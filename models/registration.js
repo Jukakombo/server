@@ -10,8 +10,9 @@ const registrationSchema = mongoose.Schema(
     country: {type:String, required: true},
     amount: Number,
     paymentMethode: {type:String, required: true},
-    paymentStatus: {type:Boolean, required: true, default:false},
+    paymentStatus: {type:String, required: true},
     whatsApp: {type:String, required: true},
+    paidAt: {type:Date},
   },
   { timestamps: true }
 );
